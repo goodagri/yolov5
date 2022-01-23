@@ -279,7 +279,7 @@ img_list = glob("./{}/*.jpg".format(target_path))
 
 namelist = []
 for full_name in img_list:
-    name, _ =  os.path.splitext(full_name.split("\\")[1])
+    name, _ =  os.path.splitext(full_name.split("/")[-1])
     namelist.append(name)
 random.seed(2020)
 random.shuffle(namelist)
